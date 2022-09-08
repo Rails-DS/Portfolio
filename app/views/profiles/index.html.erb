@@ -1,0 +1,14 @@
+<h1>My Profile items </h1>
+
+<p>
+	<%= link_to "Create new Profile", new_profile_path %>
+	<% @profile.each do | profile_item |  %>
+		<h4><%= link_to profile_item.title, profile_path(profile_item) %></h4>
+		<p><%= profile_item.subtitle %></p>
+		<p><%= profile_item.body %></p>
+		<p><%= image_tag profile_item.thumb_image unless profile_item.thumb_image.nil? %></p>
+		<%= link_to "Edit", edit_profile_path(profile_item) %>	
+		<%= link_to 'Delete profile', profile_path(profile_item), method: :delete, data: { confirm: 'Are you sure?' } %>
+		<hr>
+    <%end %>
+</p> 
