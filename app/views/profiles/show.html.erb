@@ -1,5 +1,5 @@
 
-<%= image_tag @profile_item.main_image %>
+<%= image_tag @profile_item.main_image unless @profile_item.main_image.nil?%>
 <h2><%=  @profile_item.title %></h2>
 <p><%=  @profile_item.subtitle %></p>
 <p><%=  @profile_item.body %></p>

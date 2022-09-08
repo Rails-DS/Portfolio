@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
+  layout "blog"
   before_action :set_blog, only: %i[ show edit update destroy ]
 
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
-    @page_title = "shibu"
+    @page_title = "Rails-Blog-Page"
   end
 
   # GET /blogs/1 or /blogs/1.json

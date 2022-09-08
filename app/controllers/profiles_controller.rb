@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
+  layout "profile"
 	def index
 		@profile = Profile.all
+    @page_title = "Rails-Profile-Page"
 	end
 
 	def new 
@@ -39,12 +41,13 @@ class ProfilesController < ApplicationController
  	 @profile_item = Profile.find(params[:id])
  end 
 
+
 def destroy
     @profile_item = Profile.find(params[:id])
-
     @profile_item.destroy
+
     respond_to do |format|
-      format.html { redirect_to profiles_url, notice: "Profile was successfully destroyed." }
+      format.html { redirect_to profiles_path, notice: "Profile was successfully destroyed." }
     end
   end
 

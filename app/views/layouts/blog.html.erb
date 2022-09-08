@@ -5,21 +5,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Change the link tag from application to blogs to show which stylesheet it should include in the mindex file for blogs -->
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-    <!-- Render pages from shared folder for nav items -->
-    <%= render "shared/nav" %>
-
-    <!--Yield keyword used to render pages in the file-->
+    
+    <!--MOST IMPORTANT TO RENDER PAGES IN THE FILE-->
     <%= yield %>
     
   <!--Used to caputure session in the file   -->
     <% if session[:source] %>
      <p> Thanks for visiting <%= session[:source] %></p>
     <% end %>
+<%= render "shared/nav" %>
+
   </body>
 </html>
