@@ -11,14 +11,16 @@
 
   <body>
     
-    <!--MOST IMPORTANT TO RENDER PAGES IN THE FILE-->
+    <!-- Partials -->
+    <%= render "shared/nav", nav: 'profile_nav' %>
+   
+    <!--Render pages in the file-->
     <%= yield %>
     
-  <!--Used to caputure session in the file   -->
+    <!--Used to capture session in the file   -->
     <% if session[:source] %>
      <p> Thanks for visiting <%= session[:source] %></p>
     <% end %>
 
-    <%= render "shared/nav" %>
   </body>
 </html>

@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 2022_09_08_072954) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_blogs_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

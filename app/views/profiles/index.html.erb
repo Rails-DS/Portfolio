@@ -8,7 +8,7 @@
 		<p><%= profile_item.body %></p>
 		<p><%= image_tag profile_item.thumb_image unless profile_item.thumb_image.nil? %></p>
 		<%= link_to "Edit", edit_profile_path(profile_item) %>	
-		<%= button_to 'Delete', profile_item, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'Delete', profile_item, method: :delete, data: { confirm: 'Are you sure?' } %>
 		<hr>
     <%end %>
 </p>  

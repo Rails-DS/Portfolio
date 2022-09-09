@@ -20,9 +20,8 @@ class ProfilesController < ApplicationController
     end
   end
 
-
-  def edit
-  	@profile_item = Profile.find(params[:id])
+def edit
+	@profile_item = Profile.find(params[:id])
   end
 
  def update

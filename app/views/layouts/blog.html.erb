@@ -12,6 +12,7 @@
 
   <body>
     
+  <%= render "shared/nav", nav: 'blog_nav' %>
     <!--MOST IMPORTANT TO RENDER PAGES IN THE FILE-->
     <%= yield %>
     
@@ -19,7 +20,6 @@
     <% if session[:source] %>
      <p> Thanks for visiting <%= session[:source] %></p>
     <% end %>
-<%= render "shared/nav" %>
 
   </body>
 </html>
